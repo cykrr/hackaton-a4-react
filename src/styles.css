@@ -40,6 +40,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ── NAV ── */
@@ -735,8 +736,10 @@ body {
   font-size: clamp(11px, 1.4vw, 13px);
   color: #38bdf8;
   line-height: 1.5;
-  overflow-x: auto;
+  overflow: hidden;
   text-align: left;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 /* ── SECCIÓN 4: CRONOGRAMA ── */

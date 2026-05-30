@@ -250,8 +250,7 @@ export default function App() {
                 <div className="tech-dot green" />
                 <span className="tech-tab-title">vibe-coding-workspace.tsx</span>
               </div>
-              <pre className="tech-code-preview">
-{`// Motores de IA Activos:
+              <pre className="tech-code-preview">{`// Motores de IA Activos:
 // [✓] DeepSeek-V4-Flash
 // [✓] Gemma 4 31B
 
@@ -266,8 +265,7 @@ const HackathonProject = () => {
       <Innovation level="max" />
     </div>
   );
-};`}
-              </pre>
+};`}</pre>
             </div>
           </div>
         </div>
