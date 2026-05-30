@@ -307,8 +307,8 @@ body {
 
 .ods-wheel {
   position: relative;
-  width: 56px;
-  height: 56px;
+  width: 16px;
+  height: 16px;
   flex: 0 0 auto;
   border-radius: 50%;
   background: conic-gradient(
@@ -330,23 +330,23 @@ body {
     #00689d 318deg 339.2deg,
     #19486a 339.2deg 360deg
   );
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .ods-wheel::before {
   content: '';
   position: absolute;
-  inset: 6px;
+  inset: 1px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  border: 0.5px solid rgba(255, 255, 255, 0.95);
 }
 
 .ods-wheel-hole {
   position: absolute;
-  inset: 17px;
+  inset: 4px;
   border-radius: 50%;
-  background: #075b9f;
-  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  background: white;
+  border: 0.5px solid rgba(255, 255, 255, 0.9);
 }
 
 .purpose-brush h3 {

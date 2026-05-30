@@ -13,7 +13,7 @@ import {
   School,
 } from 'lucide-react';
 import heroImage from '../img/hero-students.png';
-import pucvLogo from '../img/pucv-logo-150.webp';
+import daeLogo from '../img/logo-dae.jpeg';
 import qrImage from '../img/qr-150.png';
 
 function MountainMark() {
@@ -77,12 +77,16 @@ export default function App() {
             </div>
           </div>
 
-          <h2 className="tagline">INNOVAR HOY, TRANSFORMAR EL MAÑANA</h2>
+          <h2 className="tagline" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <span>CREA SOLUCIONES CON IA PARA DESAFÍOS REALES DE TU COMUNIDAD</span>
+            <span style={{ fontSize: '13px', color: 'var(--blue)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <OdsWheel /> INSPIRADOS EN LOS OBJETIVOS DE DESARROLLO SOSTENIBLE
+            </span>
+          </h2>
 
-          <p className="intro-copy">
-            Una experiencia formativa intensiva para estudiantes de 1ero y 2do medio que combina
-            programación e Inteligencia Artificial para diseñar soluciones a desafíos reales de nuestras
-            comunidades y del planeta.
+          <p className="intro-copy" style={{ fontSize: '15px', lineHeight: '1.4' }}>
+            Para estudiantes de 1° y 2° medio.<br />
+            <strong style={{ color: 'var(--blue)' }}>LUNES 1 DE JULIO DE 2026</strong>
           </p>
         </section>
 
@@ -90,138 +94,97 @@ export default function App() {
           <img className="hero-image" src={heroImage} alt="Estudiantes participando en hackatón" />
         </section>
 
-        <section className="purpose-brush">
-          <OdsWheel />
-          <div>
-            <h3>TECNOLOGÍA CON PROPÓSITO</h3>
-            <p>
-              Trabajamos en soluciones para los Objetivos de Desarrollo Sostenible (ODS) de la Agenda
-              2030 de la ONU.
-            </p>
-          </div>
-        </section>
-
-        <section className="main-cta">
-          <div className="cta-icon">
-            <School size={42} strokeWidth={2.2} />
-          </div>
-          <div>
-            <strong>¡SÉ PARTE Y POSTULA</strong>
-            <strong>A TU ESTABLECIMIENTO!</strong>
-          </div>
-        </section>
-
-        <p className="date-copy">
-          Forma parte de esta jornada única durante las vacaciones de invierno 2026.
-        </p>
-
-        <section className="date-box">
-          <Calendar size={38} strokeWidth={2.8} />
-          <div>
-            <strong>POSTULACIONES</strong>
-            <strong>HASTA EL</strong>
-            <b>30 DE MAYO</b>
-          </div>
-        </section>
-
-        <section className="info-panel">
-          <article className="info-col col-1">
+        <section className="info-panel" style={{ top: '440px', left: '30px', height: '180px' }}>
+          <article className="info-col col-1" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <IconBubble>
               <Target size={34} strokeWidth={2.6} />
             </IconBubble>
-            <h3>1. OBJETIVOS</h3>
-            <p>
-              Fomentar la curiosidad científica y desarrollar competencias tecnológicas avanzadas
-              utilizando IA y <strong>“vibe coding”</strong> para resolver problemas reales alineados con los ODS.
+            <h3 style={{ fontSize: '20px', marginBottom: '12px', marginTop: '15px', textAlign: 'center' }}>APRENDE</h3>
+            <p style={{ textAlign: 'center', fontSize: '15px', lineHeight: '1.4' }}>
+              IA, creatividad y trabajo en equipo.
             </p>
           </article>
 
-          <div className="panel-divider d1" />
+          <div className="panel-divider d1" style={{ height: '140px', top: '20px' }} />
 
-          <article className="info-col col-2">
+          <article className="info-col col-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <IconBubble>
-              <Users size={34} strokeWidth={2.6} />
+              <Cpu size={34} strokeWidth={2.6} />
             </IconBubble>
-            <h3>2. METODOLOGÍA</h3>
-            <ul>
-              <li>Jornada única de 6 a 8 horas.</li>
-              <li>Equipos de 3 estudiantes — 6 a 8 equipos.</li>
-              <li>Acompañamiento de estudiantes universitarios como monitores.</li>
-              <li>Desarrollo de prototipos con apoyo de herramientas de IA.</li>
-              <li>Presentación ante jurado, diplomas y premios para los ganadores.</li>
-            </ul>
+            <h3 style={{ fontSize: '20px', marginBottom: '12px', marginTop: '15px', textAlign: 'center' }}>CREA</h3>
+            <p style={{ textAlign: 'center', fontSize: '15px', lineHeight: '1.4' }}>
+              Un prototipo con tu equipo para un desafío real.
+            </p>
           </article>
 
-          <div className="panel-divider d2" />
+          <div className="panel-divider d2" style={{ height: '140px', top: '20px' }} />
 
-          <article className="info-col col-3">
+          <article className="info-col col-3" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <IconBubble>
               <Trophy size={34} strokeWidth={2.6} />
             </IconBubble>
-            <h3>3. ¿QUÉ OBTIENEN LOS ESTUDIANTES?</h3>
-            <ul className="check-list">
-              <li><CheckCircle2 size={17} />Nuevas habilidades para el futuro</li>
-              <li><CheckCircle2 size={17} />Trabajo colaborativo y liderazgo</li>
-              <li><CheckCircle2 size={17} />Impacto positivo en su comunidad y el planeta</li>
-              <li><CheckCircle2 size={17} />Reconocimiento y premios</li>
-            </ul>
+            <h3 style={{ fontSize: '20px', marginBottom: '12px', marginTop: '15px', textAlign: 'center' }}>DESTACA</h3>
+            <p style={{ textAlign: 'center', fontSize: '15px', lineHeight: '1.4' }}>
+              Presenta tu idea frente al jurado y gana reconocimiento.
+            </p>
           </article>
         </section>
 
-        <section className="resources-panel">
-          <h3>4. RECURSOS Y LOGÍSTICA</h3>
-          <div className="resources-grid">
-            <div className="resource-item">
-              <IconBubble><Utensils size={24} /></IconBubble>
-              <p>Alimentación para estudiantes y apoderados.</p>
-            </div>
-            <TinyDivider />
-            <div className="resource-item">
-              <IconBubble><Pencil size={24} /></IconBubble>
-              <p>Materiales de papelería para el desarrollo de ideas.</p>
-            </div>
-            <TinyDivider />
-            <div className="resource-item">
-              <IconBubble><Cpu size={24} /></IconBubble>
-              <p>Licencias de herramientas de IA y programación para los prototipos.</p>
-            </div>
-            <TinyDivider />
-            <div className="resource-item">
-              <IconBubble><UserCheck size={24} /></IconBubble>
-              <p>Acompañamiento de monitores universitarios durante toda la jornada.</p>
+        <div style={{ position: 'absolute', top: '645px', left: '0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '60px', paddingRight: '100px' }}>
+            <section className="date-box" style={{ position: 'relative', top: 'auto', left: 'auto', width: '280px', height: '110px', transform: 'none', margin: 0, borderRadius: '18px', boxShadow: '0 15px 35px rgba(244, 180, 49, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px' }}>
+              <Calendar size={48} strokeWidth={2.8} />
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <strong style={{ fontSize: '21px', margin: 0 }}>POSTULACIONES</strong>
+                <strong style={{ fontSize: '21px', margin: 0 }}>HASTA EL</strong>
+                <b style={{ fontSize: '34px', margin: 0 }}>10 DE JUNIO</b>
+              </div>
+            </section>
+
+            <div className="contact-qr" style={{ position: 'relative', top: 'auto', left: 'auto', height: '110px', width: '110px', background: 'white', borderRadius: '18px', border: '2px solid #e0e6ed', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <img className="qr-image" src={qrImage} alt="Código QR de postulación" style={{ width: '90px', height: '90px' }} />
+              <div className="hand-note" style={{ position: 'absolute', left: '125px', width: 'max-content', display: 'flex', flexDirection: 'column', gap: '0', transform: 'rotate(-2deg)' }}>
+                <span style={{ fontSize: '22px', fontWeight: 900, color: 'var(--blue)', fontFamily: 'Caveat, cursive', lineHeight: '1' }}>Escanea</span>
+                <span style={{ fontSize: '22px', fontWeight: 900, color: 'var(--blue)', fontFamily: 'Caveat, cursive', lineHeight: '1' }}>y postula</span>
+              </div>
             </div>
           </div>
+          
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--blue)', fontWeight: 800, fontSize: '15px', textTransform: 'uppercase', letterSpacing: '0.05em', background: 'rgba(7, 95, 174, 0.08)', padding: '8px 20px', borderRadius: '99px' }}>
+            <Users size={20} strokeWidth={2.5} />
+            <span>Actividad con perspectiva de género</span>
+          </div>
+        </div>
+
+        <div style={{ position: 'absolute', top: '840px', left: '0', width: '100%', textAlign: 'center' }}>
+          <p style={{ fontSize: '24px', fontWeight: '900', color: 'var(--blue)', margin: '0 0 10px 0', letterSpacing: '-0.02em' }}>
+            ¡ARMA TU EQUIPO Y PARTICIPA!
+          </p>
+          <div className="contact-email" style={{ position: 'static', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', color: '#10213c', width: 'auto' }}>
+            <Mail size={18} />
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
+              <span style={{ color: 'var(--navy)', fontSize: '14px', display: 'inline', margin: 0 }}>Dudas:</span>
+              <strong style={{ color: 'var(--blue)', fontSize: '16px', display: 'inline', margin: 0 }}>rosa.franco.v@mail.pucv.cl</strong>
+            </div>
+          </div>
+        </div>
+
+        <section className="resources-panel" style={{ top: '930px', left: '30px', width: '734px', background: 'transparent', boxShadow: 'none', borderTop: '2px dashed rgba(6, 26, 55, 0.15)', borderRadius: 0, padding: '20px 0', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <p style={{ margin: 0, fontSize: '18px', fontWeight: 700, color: 'var(--navy)' }}>
+            Incluye mentores, materiales, alimentación y premios.
+          </p>
         </section>
 
-        <section className="contact-panel">
-          <div className="contact-left">
-            <div className="mail-ring"><Mail size={34} /></div>
-            <div>
-              <strong>INSCRIBE A TU COLEGIO</strong>
-              <b>Y SÉ PARTE DEL CAMBIO</b>
-            </div>
+        <section className="support-strip-new" style={{ position: 'absolute', top: '980px', left: '0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '6px', zIndex: 4 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', justifyContent: 'center' }}>
+            <span style={{ color: 'var(--blue)', fontSize: '15px', fontWeight: 900, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
+              CON EL APOYO DE:
+            </span>
+            <img src={daeLogo} alt="Logo DAE" style={{ height: '70px', objectFit: 'contain', mixBlendMode: 'multiply' }} />
           </div>
-
-          <div className="contact-email">
-            <Mail size={21} />
-            <div>
-              <span>Más información e inscripciones:</span>
-              <strong>rosa.franco.v@mail.pucv.cl</strong>
-            </div>
-          </div>
-
-          <div className="contact-qr">
-            <img className="qr-image" src={qrImage} alt="Código QR de postulación" />
-            <div className="hand-note">
-              <span>Escanea</span>
-              <span>y postula</span>
-            </div>
-          </div>
-        </section>
-
-        <section className="support-strip">
-          <span>CON EL APOYO DE:</span>
-          <img className="support-logo" src={pucvLogo} alt="Logo PUCV" />
+          <span style={{ textAlign: 'center', color: 'var(--navy)', fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em', marginTop: '-4px' }}>
+            Proyecto financiado por <strong>FONDO CONFÍA</strong> del Programa Con Tus Ideas Universidad Viva
+          </span>
         </section>
 
         <footer className="bottom-bar">
