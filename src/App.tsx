@@ -130,7 +130,7 @@ export default function App() {
             <a href="https://forms.gle/u8vDWM8q8NYq7jYj7" target="_blank" rel="noopener noreferrer" className="hero-cta-btn">
               ¡Inscribe a tu equipo aquí!
             </a>
-            <span className="cta-deadline-hint">Cupos limitados • Cierre 30 de Mayo</span>
+            <span className="cta-deadline-hint">Cupos limitados • Cierre 10 de Junio</span>
           </div>
         </div>
 
@@ -420,7 +420,7 @@ const HackathonProject = () => {
             </summary>
             <div className="faq-answer">
               <p>
-                El plazo máximo de inscripción y postulación de equipos es el día <strong>30 de mayo</strong>. ¡Asegura el cupo de tu colegio a tiempo!
+                El plazo máximo de inscripción y postulación de equipos es el día <strong>10 de junio</strong>. ¡Asegura el cupo de tu colegio a tiempo!
               </p>
             </div>
           </details>
@@ -434,7 +434,7 @@ const HackathonProject = () => {
           <div>
             <strong>POSTULACIONES</strong>
             <strong>HASTA EL</strong>
-            <b>30 DE MAYO</b>
+            <b>10 DE JUNIO</b>
           </div>
         </div>
 
