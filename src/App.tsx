@@ -470,7 +470,7 @@ const HackathonProject = () => {
 
       {/* ── SECCIÓN PATROCINADORES / SOPORTE ── */}
       <section className="support-section">
-        <span className="support-label">ORGANIZADORES Y PATROCINADORES:</span>
+        <span className="support-label">APOYADO POR:</span>
         <div className="sponsors-grid">
           <div className="sponsor-logo-box">
             <img src={daeLogo} alt="Logo DAE" className="support-logo" />
@@ -487,10 +487,6 @@ const HackathonProject = () => {
             <strong>PUCV Sostenible</strong>
             <span>Agenda ODS 2030</span>
           </div>
-          <div className="sponsor-name-box">
-            <strong>CSO PUCV</strong>
-            <span>Centro de Supercómputo de Oceanografía</span>
-          </div>
         </div>
         <p className="support-fine">
           Iniciativa ejecutada bajo el financiamiento del <strong>Fondo CONFÍA</strong> de la Dirección de Asuntos Estudiantiles PUCV.
@@ -502,8 +498,7 @@ const HackathonProject = () => {
         <div className="circuit-lines left" />
         <p><Snowflake size={17} /> JÓVENES QUE CODEAN HOY, LÍDERES QUE TRANSFORMAN MAÑANA.</p>
         <div className="footer-credits">
-          <span><strong>Equipo Organizador:</strong> Diego, Benjamín, Álvaro, Tano, César y Rosa.</span>
-          <span>© 2026 Pontificia Universidad Católica de Valparaíso (PUCV). Todos los derechos reservados.</span>
+          <span>Diego, Benjamín, Álvaro, Tano, César y Rosa • Equipo Hackaton 2026</span>
         </div>
         <div className="circuit-lines right" />
       </footer>
