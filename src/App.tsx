@@ -1,16 +1,20 @@
+import React from 'react';
 import {
   Calendar,
-  CheckCircle2,
   Cpu,
   Mail,
-  Pencil,
   Snowflake,
   Target,
   Trophy,
   Users,
-  Utensils,
-  UserCheck,
-  School,
+  MapPin,
+  Clock,
+  Sparkles,
+  Laptop,
+  HelpCircle,
+  Award,
+  ChevronDown,
+  BookOpen
 } from 'lucide-react';
 import heroImage from '../img/hero-students.png';
 import daeLogo from '../img/logo-dae.jpeg';
@@ -37,32 +41,42 @@ function OdsWheel() {
   );
 }
 
-
 function IconBubble({ children }: { children: React.ReactNode }) {
   return <div className="icon-bubble">{children}</div>;
 }
 
-function TinyDivider() {
-  return <div className="tiny-divider" />;
-}
-
 export default function App() {
   return (
-    <div className="app-shell">
-      <div className="screen-toolbar">
-        <strong>Hackaton A4 poster</strong>
-        <span>Use Ctrl/Cmd + P → A4 → margins none → background graphics on.</span>
-      </div>
+    <div className="page-root">
 
-      <main className="a4-poster" aria-label="Afiche Hackaton de Invierno A4">
+      {/* ── NAV ── */}
+      <nav className="site-nav">
+        <a href="#" className="nav-logo-link" aria-label="Volver al inicio">
+          <MountainMark />
+        </a>
+        <div className="nav-links">
+          <a href="#acerca" className="nav-link-item">¿Qué es?</a>
+          <a href="#tecnologia" className="nav-link-item">Tecnología</a>
+          <a href="#cronograma" className="nav-link-item">Cronograma</a>
+          <a href="#premios" className="nav-link-item">Premios</a>
+          <a href="#faq" className="nav-link-item">FAQ</a>
+          <a href="https://forms.gle/u8vDWM8q8NYq7jYj7" target="_blank" rel="noopener noreferrer" className="nav-cta">
+            ¡Inscribirse!
+          </a>
+        </div>
+      </nav>
+
+      {/* ── HERO ── */}
+      <section className="hero" aria-label="Hackaton de Invierno">
         <Snowflake className="decor-snow snow-1" />
         <Snowflake className="decor-snow snow-2" />
         <Snowflake className="decor-snow snow-3" />
-        <Snowflake className="decor-snow snow-4" />
-        <div className="paper-texture" />
 
-        <section className="header-left">
-          <MountainMark />
+        <div className="hero-content">
+          <div className="hero-badge">
+            <Sparkles size={14} className="sparkle-icon" />
+            <span>INVIERNO 2026 • PUCV</span>
+          </div>
 
           <h1 className="poster-title title-main">HACKATON</h1>
           <div className="de-row">
@@ -77,123 +91,425 @@ export default function App() {
             </div>
           </div>
 
-          <h2 className="tagline" style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-            <span>CREA SOLUCIONES CON IA PARA DESAFÍOS REALES DE TU COMUNIDAD</span>
-            <span style={{ fontSize: '13px', color: 'var(--blue)', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <OdsWheel /> INSPIRADOS EN LOS OBJETIVOS DE DESARROLLO SOSTENIBLE
+          <h2 className="tagline">
+            <span>¡Crea el futuro con Vibe Coding!</span>
+            <span className="tagline-sub">
+              Diseña soluciones para los Objetivos de Desarrollo Sostenible (ODS) de la ONU usando Inteligencia Artificial.
+            </span>
+            <span className="tagline-ods">
+              <OdsWheel /> EN ALIANZA CON PUCV SOSTENIBLE
             </span>
           </h2>
 
-          <p className="intro-copy" style={{ fontSize: '15px', lineHeight: '1.4' }}>
-            Para estudiantes de 1° y 2° medio.<br />
-            <strong style={{ color: 'var(--blue)' }}>LUNES 1 DE JULIO DE 2026</strong>
-          </p>
-        </section>
+          {/* Quick coordinates cards */}
+          <div className="hero-coords">
+            <div className="coord-card">
+              <Calendar className="coord-icon" size={20} />
+              <div>
+                <span className="coord-label">Fecha</span>
+                <strong className="coord-val">Primera semana de julio, 2026</strong>
+              </div>
+            </div>
+            <div className="coord-card">
+              <MapPin className="coord-icon" size={20} />
+              <div>
+                <span className="coord-label">Lugar</span>
+                <strong className="coord-val">Edificios FIN e IBC, PUCV</strong>
+              </div>
+            </div>
+            <div className="coord-card">
+              <Clock className="coord-icon" size={20} />
+              <div>
+                <span className="coord-label">Duración</span>
+                <strong className="coord-val">Jornada Intensiva (6-8 hrs)</strong>
+              </div>
+            </div>
+          </div>
 
-        <section className="hero-placeholder" aria-label="Imagen de estudiantes">
+          <div className="hero-actions">
+            <a href="https://forms.gle/u8vDWM8q8NYq7jYj7" target="_blank" rel="noopener noreferrer" className="hero-cta-btn">
+              ¡Inscribe a tu equipo aquí!
+            </a>
+            <span className="cta-deadline-hint">Cupos limitados • Cierre 30 de Mayo</span>
+          </div>
+        </div>
+
+        <div className="hero-image-wrap">
           <img className="hero-image" src={heroImage} alt="Estudiantes participando en hackatón" />
-        </section>
+          <div className="floating-badge">
+            <strong>100%</strong>
+            <span>Gratuito</span>
+          </div>
+        </div>
+      </section>
 
-        <section className="info-panel" style={{ top: '440px', left: '30px', height: '180px' }}>
-          <article className="info-col col-1" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <IconBubble>
-              <Target size={34} strokeWidth={2.6} />
-            </IconBubble>
-            <h3 style={{ fontSize: '20px', marginBottom: '12px', marginTop: '15px', textAlign: 'center' }}>APRENDE</h3>
-            <p style={{ textAlign: 'center', fontSize: '15px', lineHeight: '1.4' }}>
-              IA, creatividad y trabajo en equipo.
+      {/* ── CARDS (Aprende, Crea, Destaca) ── */}
+      <section className="cards-section">
+        <article className="card">
+          <IconBubble><Target size={34} strokeWidth={2.6} /></IconBubble>
+          <h3>APRENDE</h3>
+          <p>IA de frontera, buenas prácticas de desarrollo y trabajo colaborativo.</p>
+        </article>
+        <div className="card-divider" />
+        <article className="card">
+          <IconBubble><Cpu size={34} strokeWidth={2.6} /></IconBubble>
+          <h3>CREA</h3>
+          <p>Usa vibe coding para dar vida a un prototipo real que impacte tu comunidad.</p>
+        </article>
+        <div className="card-divider" />
+        <article className="card">
+          <IconBubble><Trophy size={34} strokeWidth={2.6} /></IconBubble>
+          <h3>DESTACA</h3>
+          <p>Presenta tu solución ante un jurado experto y gana increíbles reconocimientos.</p>
+        </article>
+      </section>
+
+      {/* ── SECCIÓN 2: ACERCA DEL EVENTO ── */}
+      <section id="acerca" className="about-details-section">
+        <div className="section-header">
+          <span className="section-subtitle">Sobre la Hackathon</span>
+          <h2 className="section-title">¿Qué es la Hackathon de Invierno?</h2>
+          <div className="section-decor-line" />
+        </div>
+
+        <div className="about-grid">
+          <div className="about-card">
+            <div className="about-icon-wrap">
+              <Users size={28} />
+            </div>
+            <h4>¿Para quién es?</h4>
+            <p>
+              Una convocatoria exclusiva diseñada para estudiantes de <strong>1° y 2° año de enseñanza media</strong> que quieren liderar la transformación digital desde el colegio.
             </p>
-          </article>
+          </div>
 
-          <div className="panel-divider d1" style={{ height: '140px', top: '20px' }} />
-
-          <article className="info-col col-2" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <IconBubble>
-              <Cpu size={34} strokeWidth={2.6} />
-            </IconBubble>
-            <h3 style={{ fontSize: '20px', marginBottom: '12px', marginTop: '15px', textAlign: 'center' }}>CREA</h3>
-            <p style={{ textAlign: 'center', fontSize: '15px', lineHeight: '1.4' }}>
-              Un prototipo con tu equipo para un desafío real.
+          <div className="about-card highlighted">
+            <div className="about-icon-wrap">
+              <BookOpen size={28} />
+            </div>
+            <h4>La Misión</h4>
+            <p>
+              Una experiencia formativa intensiva tipo <strong>bootcamp</strong> que busca acercar la programación de frontera directamente a las aulas, combatiendo la brecha de contenidos tecnológicos en el currículum escolar tradicional.
             </p>
-          </article>
+          </div>
 
-          <div className="panel-divider d2" style={{ height: '140px', top: '20px' }} />
-
-          <article className="info-col col-3" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <IconBubble>
-              <Trophy size={34} strokeWidth={2.6} />
-            </IconBubble>
-            <h3 style={{ fontSize: '20px', marginBottom: '12px', marginTop: '15px', textAlign: 'center' }}>DESTACA</h3>
-            <p style={{ textAlign: 'center', fontSize: '15px', lineHeight: '1.4' }}>
-              Presenta tu idea frente al jurado y gana reconocimiento.
+          <div className="about-card">
+            <div className="about-icon-wrap">
+              <Sparkles size={28} />
+            </div>
+            <h4>La Metodología</h4>
+            <p>
+              Trabajaremos con <strong>Vibe Coding</strong> (programación asistida por Inteligencia Artificial de última generación) para resolver problemáticas locales reales basadas directamente en los <strong>ODS de la Agenda 2030 de la ONU</strong>.
             </p>
-          </article>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <div style={{ position: 'absolute', top: '645px', left: '0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '60px', paddingRight: '100px' }}>
-            <section className="date-box" style={{ position: 'relative', top: 'auto', left: 'auto', width: '280px', height: '110px', transform: 'none', margin: 0, borderRadius: '18px', boxShadow: '0 15px 35px rgba(244, 180, 49, 0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px' }}>
-              <Calendar size={48} strokeWidth={2.8} />
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <strong style={{ fontSize: '21px', margin: 0 }}>POSTULACIONES</strong>
-                <strong style={{ fontSize: '21px', margin: 0 }}>HASTA EL</strong>
-                <b style={{ fontSize: '34px', margin: 0 }}>10 DE JUNIO</b>
+      {/* ── SECCIÓN 3: EL DESAFÍO Y LA TECNOLOGÍA ── */}
+      <section id="tecnologia" className="tech-section">
+        <div className="tech-bg-glow" />
+        <div className="tech-container">
+          <div className="tech-text-block">
+            <span className="section-subtitle light">Experiencia de Vanguardia</span>
+            <h2 className="section-title text-white">El Desafío & La Tecnología</h2>
+            <div className="section-decor-line yellow" />
+            <p className="tech-intro">
+              Prepárate para experimentar una maratón de desarrollo ágil con las mejores herramientas del mercado. Diseñarás y programarás como un profesional del futuro.
+            </p>
+
+            <div className="tech-features">
+              <div className="tech-feat-item">
+                <div className="tech-feat-icon"><Cpu size={20} /></div>
+                <div>
+                  <strong>Inteligencia Artificial de Copiloto</strong>
+                  <p>No estarás solo. Desarrollarás asistido en tiempo real por motores de IA de clase mundial como <strong>DeepSeek-V4-Flash</strong> y <strong>Gemma 4 31B</strong>.</p>
+                </div>
               </div>
-            </section>
-
-            <div className="contact-qr" style={{ position: 'relative', top: 'auto', left: 'auto', height: '110px', width: '110px', background: 'white', borderRadius: '18px', border: '2px solid #e0e6ed', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img className="qr-image" src={qrImage} alt="Código QR de postulación" style={{ width: '90px', height: '90px' }} />
-              <div className="hand-note" style={{ position: 'absolute', left: '125px', width: 'max-content', display: 'flex', flexDirection: 'column', gap: '0', transform: 'rotate(-2deg)' }}>
-                <span style={{ fontSize: '22px', fontWeight: 900, color: 'var(--blue)', fontFamily: 'Caveat, cursive', lineHeight: '1' }}>Escanea</span>
-                <span style={{ fontSize: '22px', fontWeight: 900, color: 'var(--blue)', fontFamily: 'Caveat, cursive', lineHeight: '1' }}>y postula</span>
+              <div className="tech-feat-item">
+                <div className="tech-feat-icon"><Laptop size={20} /></div>
+                <div>
+                  <strong>Stack Tecnológico Estandarizado</strong>
+                  <p>Todos los equipos construirán y desplegarán aplicaciones web modernas utilizando <strong>React, Vite y Tailwind CSS</strong>.</p>
+                </div>
+              </div>
+              <div className="tech-feat-item">
+                <div className="tech-feat-icon"><Users size={20} /></div>
+                <div>
+                  <strong>Dinámica y Mentores Expertos</strong>
+                  <p>Competirán entre <strong>6 y 8 equipos</strong> de 3 estudiantes. Cada equipo estará permanentemente guiado por monitores universitarios de carreras STEM de la PUCV.</p>
+                </div>
               </div>
             </div>
           </div>
-          
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--blue)', fontWeight: 800, fontSize: '15px', textTransform: 'uppercase', letterSpacing: '0.05em', background: 'rgba(7, 95, 174, 0.08)', padding: '8px 20px', borderRadius: '99px' }}>
-            <Users size={20} strokeWidth={2.5} />
-            <span>Actividad con perspectiva de género</span>
-          </div>
-        </div>
 
-        <div style={{ position: 'absolute', top: '840px', left: '0', width: '100%', textAlign: 'center' }}>
-          <p style={{ fontSize: '24px', fontWeight: '900', color: 'var(--blue)', margin: '0 0 10px 0', letterSpacing: '-0.02em' }}>
-            ¡ARMA TU EQUIPO Y PARTICIPA!
-          </p>
-          <div className="contact-email" style={{ position: 'static', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px', color: '#10213c', width: 'auto' }}>
-            <Mail size={18} />
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
-              <span style={{ color: 'var(--navy)', fontSize: '14px', display: 'inline', margin: 0 }}>Dudas:</span>
-              <strong style={{ color: 'var(--blue)', fontSize: '16px', display: 'inline', margin: 0 }}>rosa.franco.v@mail.pucv.cl</strong>
+          <div className="tech-visual-block">
+            <div className="tech-card-3d">
+              <div className="tech-card-header">
+                <div className="tech-dot red" />
+                <div className="tech-dot yellow" />
+                <div className="tech-dot green" />
+                <span className="tech-tab-title">vibe-coding-workspace.tsx</span>
+              </div>
+              <pre className="tech-code-preview">
+{`// Motores de IA Activos:
+// [✓] DeepSeek-V4-Flash
+// [✓] Gemma 4 31B
+
+const HackathonProject = () => {
+  const stack = ['React', 'Vite', 'TailwindCSS'];
+  const odsTarget = 'Desafíos Sostenibles ONU';
+  const teamSize = 3;
+  
+  return (
+    <div className="future-built-by-you">
+      <VibeCoding status="active" assistance="100%" />
+      <Innovation level="max" />
+    </div>
+  );
+};`}
+              </pre>
             </div>
           </div>
         </div>
+      </section>
 
-        <section className="resources-panel" style={{ top: '930px', left: '30px', width: '734px', background: 'transparent', boxShadow: 'none', borderTop: '2px dashed rgba(6, 26, 55, 0.15)', borderRadius: 0, padding: '20px 0', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <p style={{ margin: 0, fontSize: '18px', fontWeight: 700, color: 'var(--navy)' }}>
-            Incluye mentores, materiales, alimentación y premios.
+      {/* ── SECCIÓN 4: CRONOGRAMA DE LA JORNADA ── */}
+      <section id="cronograma" className="timeline-section">
+        <div className="section-header">
+          <span className="section-subtitle">Día Cero</span>
+          <h2 className="section-title">Cronograma de la Jornada</h2>
+          <div className="section-decor-line" />
+          <p className="section-desc">
+            Así se estructuran las 6 a 8 horas de pura innovación, aprendizaje y trabajo en equipo.
           </p>
-        </section>
+        </div>
 
-        <section className="support-strip-new" style={{ position: 'absolute', top: '980px', left: '0', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '6px', zIndex: 4 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px', justifyContent: 'center' }}>
-            <span style={{ color: 'var(--blue)', fontSize: '15px', fontWeight: 900, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-              CON EL APOYO DE:
-            </span>
-            <img src={daeLogo} alt="Logo DAE" style={{ height: '70px', objectFit: 'contain', mixBlendMode: 'multiply' }} />
+        <div className="timeline-wrapper">
+          <div className="timeline-line" />
+
+          <div className="timeline-item">
+            <div className="timeline-badge">01</div>
+            <div className="timeline-panel">
+              <span className="time-tag">Mañana</span>
+              <h4>Charlas e Inspiración</h4>
+              <p>
+                Iniciamos con charlas dinámicas de bienvenida sobre Inteligencia Artificial, Buenas Prácticas de Código y los ODS con el apoyo directo de <strong>PUCV Sostenible</strong>.
+              </p>
+            </div>
           </div>
-          <span style={{ textAlign: 'center', color: 'var(--navy)', fontSize: '13px', fontWeight: 600, letterSpacing: '0.02em', marginTop: '-4px' }}>
-            Proyecto financiado por <strong>FONDO CONFÍA</strong> del Programa Con Tus Ideas Universidad Viva
-          </span>
-        </section>
 
-        <footer className="bottom-bar">
-          <div className="circuit-lines left" />
-          <p><Snowflake size={17} /> JÓVENES QUE CODEAN HOY, LÍDERES QUE TRANSFORMAN MAÑANA.</p>
-          <span>Conectemos a nuestras comunidades educativas con el futuro.</span>
-          <div className="circuit-lines right" />
-        </footer>
-      </main>
+          <div className="timeline-item invert">
+            <div className="timeline-badge">02</div>
+            <div className="timeline-panel">
+              <span className="time-tag">Mediodía</span>
+              <h4>Recarga de Energías</h4>
+              <p>
+                ¡El combustible no faltará! Tendremos almuerzo y colaciones deliciosas completamente cubiertas por la organización del evento.
+              </p>
+            </div>
+          </div>
+
+          <div className="timeline-item">
+            <div className="timeline-badge">03</div>
+            <div className="timeline-panel">
+              <span className="time-tag">Tarde</span>
+              <h4>¡A Programar! (Vibe Coding)</h4>
+              <p>
+                Comienza la sesión intensiva de vibe coding. Construye y diseña tu prototipo junto a tu equipo y la guía de tu monitor asignado.
+              </p>
+            </div>
+          </div>
+
+          <div className="timeline-item invert">
+            <div className="timeline-badge">04</div>
+            <div className="timeline-panel">
+              <span className="time-tag">Cierre</span>
+              <h4>Pitch Final & Premiación</h4>
+              <p>
+                Presenta el prototipo ante un jurado experto compuesto por líderes académicos y tecnológicos. ¡Finalizamos con una gran ceremonia de premiación!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN 5: PREMIOS Y RECONOCIMIENTOS ── */}
+      <section id="premios" className="prizes-section">
+        <div className="prizes-bg-pattern" />
+        <div className="prizes-container">
+          <div className="prizes-header">
+            <Award className="gold-trophy-icon animate-bounce" size={48} />
+            <h2 className="section-title text-white">Premios & Reconocimientos</h2>
+            <div className="section-decor-line yellow" />
+          </div>
+
+          <div className="prizes-grid">
+            <div className="prize-card premium">
+              <div className="prize-icon-wrap">
+                <Trophy size={40} />
+              </div>
+              <span className="prize-rank">Para los Ganadores</span>
+              <h3>Suscripciones Premium a Herramientas de IA y Desarrollo</h3>
+              <p>
+                Asegura la continuidad de tu aprendizaje tecnológico. Recibirás suscripciones completas a herramientas avanzadas de programación e IA de última generación.
+              </p>
+            </div>
+
+            <div className="prize-card">
+              <div className="prize-icon-wrap">
+                <Award size={40} />
+              </div>
+              <span className="prize-rank">Para Todos</span>
+              <h3>Certificación Oficial de Participación</h3>
+              <p>
+                Todos los competidores recibirán un diploma oficial emitido por la Pontificia Universidad Católica de Valparaíso (PUCV), respaldando tu valiosa experiencia y destrezas en vibe coding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN 6: PREGUNTAS FRECUENTES (FAQ) ── */}
+      <section id="faq" className="faq-section">
+        <div className="section-header">
+          <HelpCircle size={36} className="faq-header-icon" />
+          <span className="section-subtitle">Preguntas Frecuentes</span>
+          <h2 className="section-title">Resuelve tus dudas</h2>
+          <div className="section-decor-line" />
+        </div>
+
+        <div className="faq-container">
+          <details className="faq-item" open>
+            <summary className="faq-question">
+              <span>¿Necesito saber programar previamente?</span>
+              <ChevronDown className="faq-chevron" size={18} />
+            </summary>
+            <div className="faq-answer">
+              <p>
+                <strong>¡Para nada!</strong> No requieres ningún conocimiento técnico previo en código. Nuestros monitores expertos PUCV y los asistentes de Inteligencia Artificial te guiarán paso a paso en el revolucionario proceso de <em>vibe coding</em>. ¡Cualquiera puede participar!
+              </p>
+            </div>
+          </details>
+
+          <details className="faq-item">
+            <summary className="faq-question">
+              <span>¿Tiene algún costo participar?</span>
+              <ChevronDown className="faq-chevron" size={18} />
+            </summary>
+            <div className="faq-answer">
+              <p>
+                La Hackathon es <strong>100% gratuita</strong> para todos los participantes seleccionados. Esto es posible gracias al financiamiento oficial del prestigioso fondo <strong>CONFÍA</strong> del Programa Con Tus Ideas Universidad Viva de la PUCV.
+              </p>
+            </div>
+          </details>
+
+          <details className="faq-item">
+            <summary className="faq-question">
+              <span>¿Tengo que llevar mi propio computador?</span>
+              <ChevronDown className="faq-chevron" size={18} />
+            </summary>
+            <div className="faq-answer">
+              <p>
+                <strong>No es necesario.</strong> La Pontificia Universidad Católica de Valparaíso proveerá computadores y todo el equipamiento de última generación necesario en sus laboratorios de computación y en el Maker Space para garantizar que todos los equipos programen en igualdad de condiciones.
+              </p>
+            </div>
+          </details>
+
+          <details className="faq-item">
+            <summary className="faq-question">
+              <span>¿Cuándo cierran las inscripciones?</span>
+              <ChevronDown className="faq-chevron" size={18} />
+            </summary>
+            <div className="faq-answer">
+              <p>
+                El plazo máximo de inscripción y postulación de equipos es el día <strong>30 de mayo</strong>. ¡Asegura el cupo de tu colegio a tiempo!
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      {/* ── POSTULACIONES POST FAQ (DEADLINE + QR) ── */}
+      <section className="deadline-section">
+        <div className="date-box">
+          <Calendar size={48} strokeWidth={2.8} />
+          <div>
+            <strong>POSTULACIONES</strong>
+            <strong>HASTA EL</strong>
+            <b>30 DE MAYO</b>
+          </div>
+        </div>
+
+        <div className="qr-wrap">
+          <img className="qr-image" src={qrImage} alt="Código QR de postulación" />
+          <div className="hand-note">
+            <span>Escanea</span>
+            <span>y postula</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── GENDER TAG ── */}
+      <div className="gender-tag">
+        <Users size={20} strokeWidth={2.5} />
+        <span>Actividad con perspectiva de género</span>
+      </div>
+
+      {/* ── CTA DE CONTACTO Y CIERRE ── */}
+      <section className="cta-section">
+        <p className="cta-headline">¡ARMA TU EQUIPO Y PARTICIPA EN ESTA EXPERIENCIA ÚNICA!</p>
+        <div className="cta-buttons-wrap">
+          <a href="https://forms.gle/u8vDWM8q8NYq7jYj7" target="_blank" rel="noopener noreferrer" className="hero-cta-btn yellow-pulse">
+            ¡Inscribir a mi equipo ahora!
+          </a>
+        </div>
+        <div className="cta-email">
+          <Mail size={18} />
+          <span className="cta-label">Contacto y dudas de apoderados o colegios:</span>
+          <a href="mailto:rosa.franco.v@mail.pucv.cl" className="cta-address">rosa.franco.v@mail.pucv.cl</a>
+        </div>
+      </section>
+
+      {/* ── SECCIÓN PATROCINADORES / SOPORTE ── */}
+      <section className="support-section">
+        <span className="support-label">ORGANIZADORES Y PATROCINADORES:</span>
+        <div className="sponsors-grid">
+          <div className="sponsor-logo-box">
+            <img src={daeLogo} alt="Logo DAE" className="support-logo" />
+          </div>
+          <div className="sponsor-name-box">
+            <strong>DAE PUCV</strong>
+            <span>Dirección de Asuntos Estudiantiles</span>
+          </div>
+          <div className="sponsor-name-box">
+            <strong>Fondo CONFÍA</strong>
+            <span>Universidad Viva PUCV</span>
+          </div>
+          <div className="sponsor-name-box">
+            <strong>PUCV Sostenible</strong>
+            <span>Agenda ODS 2030</span>
+          </div>
+          <div className="sponsor-name-box">
+            <strong>CSO PUCV</strong>
+            <span>Centro de Supercómputo de Oceanografía</span>
+          </div>
+        </div>
+        <p className="support-fine">
+          Iniciativa ejecutada bajo el financiamiento del <strong>Fondo CONFÍA</strong> de la Dirección de Asuntos Estudiantiles PUCV.
+        </p>
+      </section>
+
+      {/* ── FOOTER ── */}
+      <footer className="bottom-bar">
+        <div className="circuit-lines left" />
+        <p><Snowflake size={17} /> JÓVENES QUE CODEAN HOY, LÍDERES QUE TRANSFORMAN MAÑANA.</p>
+        <div className="footer-credits">
+          <span><strong>Equipo Organizador:</strong> Diego, Benjamín, Álvaro, Tano, César y Rosa.</span>
+          <span>© 2026 Pontificia Universidad Católica de Valparaíso (PUCV). Todos los derechos reservados.</span>
+        </div>
+        <div className="circuit-lines right" />
+      </footer>
+
     </div>
   );
 }
