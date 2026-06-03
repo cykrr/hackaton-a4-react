@@ -19,6 +19,16 @@ import {
 import heroImage from '../img/hero-students.png';
 import daeLogo from '../img/logo-dae.jpeg';
 import qrImage from '../img/qr-150.png';
+import diegoImg from '../img/diego.jpeg';
+import benjaminImg from '../img/benjamin.jpeg';
+import razielImg from '../img/raziel.jpeg';
+import joseImg from '../img/josé.jpeg';
+import javierImg from '../img/javier.jpeg';
+import oscarImg from '../img/oscar.jpeg';
+import lucianoImg from '../img/luciano.jpeg';
+import alvaroImg from '../img/álvaro.jpeg';
+import rosaImg from '../img/rosa.jpeg';
+import fabiolaImg from '../img/fabiola.jpeg';
 
 function MountainMark() {
   return (
@@ -45,6 +55,19 @@ function IconBubble({ children }: { children: React.ReactNode }) {
   return <div className="icon-bubble">{children}</div>;
 }
 
+const teamImages: Record<string, string> = {
+  Diego: diegoImg,
+  Benjamín: benjaminImg,
+  Raziel: razielImg,
+  José: joseImg,
+  Javier: javierImg,
+  Oscar: oscarImg,
+  Luciano: lucianoImg,
+  Álvaro: alvaroImg,
+  Rosa: rosaImg,
+  Fabiola: fabiolaImg,
+};
+
 export default function App() {
   return (
     <div className="page-root">
@@ -56,7 +79,7 @@ export default function App() {
         </a>
         <div className="nav-links">
           <a href="#acerca" className="nav-link-item">¿Qué es?</a>
-          <a href="#tecnologia" className="nav-link-item">Tecnología</a>
+          <a href="#desafio-tech" className="nav-link-item">Desafío Tech</a>
           <a href="#cronograma" className="nav-link-item">Cronograma</a>
           <a href="#premios" className="nav-link-item">Premios</a>
           <a href="#faq" className="nav-link-item">FAQ</a>
@@ -101,7 +124,6 @@ export default function App() {
             </span>
           </h2>
 
-          {/* Quick coordinates cards */}
           <div className="hero-coords">
             <div className="coord-card">
               <Calendar className="coord-icon" size={20} />
@@ -205,41 +227,44 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── SECCIÓN 3: EL DESAFÍO Y LA TECNOLOGÍA ── */}
-      <section id="tecnologia" className="tech-section">
+      {/* ── SECCIÓN 3: DESAFÍO TECH ── */}
+      <section id="desafio-tech" className="tech-section">
         <div className="tech-bg-glow" />
         <div className="tech-container">
           <div className="tech-text-block">
             <span className="section-subtitle light">Experiencia de Vanguardia</span>
-            <h2 className="section-title text-white">El Desafío & La Tecnología</h2>
+            <h2 className="section-title text-white">¡Prepárate para el Desafío Tech! 🚀</h2>
             <div className="section-decor-line yellow" />
             <p className="tech-intro">
-              Prepárate para experimentar una maratón de desarrollo ágil con las mejores herramientas del mercado. Diseñarás y programarás como un profesional del futuro.
+              ¿Te imaginas crear tu propia app como todo un profesional? Este es tu momento. Ven a vivir una jornada de creación digital donde la tecnología de punta será tu mejor aliada.
             </p>
 
             <div className="tech-features">
               <div className="tech-feat-item">
                 <div className="tech-feat-icon"><Cpu size={20} /></div>
                 <div>
-                  <strong>Inteligencia Artificial de Copiloto</strong>
-                  <p>No estarás solo. Desarrollarás asistido en tiempo real por motores de IA de clase mundial como <strong>DeepSeek-V4-Flash</strong> y <strong>Gemma 4 31B</strong>.</p>
+                  <strong>¿Qué vas a hacer?</strong>
+                  <p>No te enfrentarás al desafío solo. Estarás en un equipo de 3 personas y, para ayudarte a programar como un experto, tendrás a tu disposición Inteligencia Artificial de última generación (¡la misma que usan los desarrolladores que trabajan creando el futuro!).</p>
                 </div>
               </div>
               <div className="tech-feat-item">
                 <div className="tech-feat-icon"><Laptop size={20} /></div>
                 <div>
-                  <strong>Stack Tecnológico Estandarizado</strong>
-                  <p>Todos los equipos construirán y desplegarán aplicaciones web modernas utilizando <strong>React, Vite y Tailwind CSS</strong>.</p>
+                  <strong>¿Qué herramientas usarás?</strong>
+                  <p>Usaremos el mismo "stack" tecnológico que usan las grandes empresas tech para crear sitios web increíbles, modernos y rápidos: React, Vite y Tailwind CSS. Aprenderás a construir aplicaciones reales desde cero.</p>
                 </div>
               </div>
               <div className="tech-feat-item">
                 <div className="tech-feat-icon"><Users size={20} /></div>
                 <div>
-                  <strong>Dinámica y Mentores Expertos</strong>
-                  <p>Competirán entre <strong>6 y 8 equipos</strong> de 3 estudiantes. Cada equipo estará permanentemente guiado por monitores universitarios de carreras STEM de la PUCV.</p>
+                  <strong>¿Cómo será la dinámica?</strong>
+                  <p><strong>Equipos:</strong> Competirán entre 6 y 8 grupos de 3 estudiantes.</p>
+                  <p><strong>Mentoría:</strong> ¡Nadie se queda atrás! Tendrán el apoyo constante de mentores universitarios de carreras de ciencias y tecnología de la PUCV, quienes estarán ahí para resolver tus dudas y ayudarte a que tu proyecto sea un éxito.</p>
                 </div>
               </div>
             </div>
+
+            <p className="tech-outro">¿Estás listo para darle vida a tus ideas? ¡Te esperamos!</p>
           </div>
 
           <div className="tech-visual-block">
@@ -248,23 +273,16 @@ export default function App() {
                 <div className="tech-dot red" />
                 <div className="tech-dot yellow" />
                 <div className="tech-dot green" />
-                <span className="tech-tab-title">vibe-coding-workspace.tsx</span>
+                <span className="tech-tab-title">desafio-tech-workspace.tsx</span>
               </div>
-              <pre className="tech-code-preview">{`// Motores de IA Activos:
-// [✓] DeepSeek-V4-Flash
-// [✓] Gemma 4 31B
+              <pre className="tech-code-preview">{`// ¡Prepárate para el Desafío Tech! 🚀
+const teamSize = 3;
+const groups = '6 a 8';
+const stack = ['React', 'Vite', 'Tailwind CSS'];
+const support = 'IA de última generación + mentoría PUCV';
 
-const HackathonProject = () => {
-  const stack = ['React', 'Vite', 'TailwindCSS'];
-  const odsTarget = 'Desafíos Sostenibles ONU';
-  const teamSize = 3;
-  
-  return (
-    <div className="future-built-by-you">
-      <VibeCoding status="active" assistance="100%" />
-      <Innovation level="max" />
-    </div>
-  );
+const Challenge = () => {
+  return 'Tu propia app, creada desde cero';
 };`}</pre>
             </div>
           </div>
@@ -493,16 +511,41 @@ const HackathonProject = () => {
         </p>
       </section>
 
+      {/* ── SECCIÓN EQUIPO ── */}
+      <section className="team-section">
+        <h2 className="section-title">Nuestro Equipo</h2>
+        <div className="team-grid">
+          {[
+            {name: 'Diego', zoomClass: 'zoomed'},
+            {name: 'Benjamín', zoomClass: ''},
+            {name: 'Álvaro', zoomClass: ''},
+            {name: 'Luciano', zoomClass: ''},
+            {name: 'Oscar', zoomClass: ''},
+            {name: 'Rosa', zoomClass: ''},
+            {name: 'Raziel', zoomClass: ''},
+            {name: 'José', zoomClass: 'zoomed'},
+            {name: 'Javier', zoomClass: 'zoomed-more'},
+            {name: 'Fabiola', zoomClass: ''},
+          ].map(({name, zoomClass}) => (
+            <div key={name} className="team-member">
+              <div className="member-bubble">
+                {teamImages[name] && <img src={teamImages[name]} alt={name} className={`member-photo ${zoomClass}`} />}
+              </div>
+              <span>{name}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── FOOTER ── */}
       <footer className="bottom-bar">
         <div className="circuit-lines left" />
         <p><Snowflake size={17} /> JÓVENES QUE CODEAN HOY, LÍDERES QUE TRANSFORMAN MAÑANA.</p>
         <div className="footer-credits">
-          <span>Diego, Benjamín, Álvaro, Tano, César y Rosa • Equipo Hackaton 2026</span>
+          <span>Equipo Hackaton Invierno 2026</span>
         </div>
         <div className="circuit-lines right" />
       </footer>
-
     </div>
   );
 }
