@@ -29,6 +29,7 @@ import lucianoImg from '../img/luciano.jpeg';
 import alvaroImg from '../img/álvaro.jpeg';
 import rosaImg from '../img/rosa.jpeg';
 import fabiolaImg from '../img/fabiola.jpeg';
+import cautronLogo from '../img/cautron-logo.jpeg';
 
 function MountainMark() {
   return (
@@ -129,7 +130,7 @@ export default function App() {
               <Calendar className="coord-icon" size={20} />
               <div>
                 <span className="coord-label">Fecha</span>
-                <strong className="coord-val">Primera semana de julio, 2026</strong>
+                <strong className="coord-val">1 de julio, 2026</strong>
               </div>
             </div>
             <div className="coord-card">
@@ -152,7 +153,7 @@ export default function App() {
             <a href="https://forms.gle/u8vDWM8q8NYq7jYj7" target="_blank" rel="noopener noreferrer" className="hero-cta-btn">
               ¡Inscribe a tu equipo aquí!
             </a>
-            <span className="cta-deadline-hint">Cupos limitados • Cierre 10 de Junio</span>
+            <span className="cta-deadline-hint">Cupos limitados • Cierre 15 de Junio</span>
           </div>
         </div>
 
@@ -438,7 +439,7 @@ const Challenge = () => {
             </summary>
             <div className="faq-answer">
               <p>
-                El plazo máximo de inscripción y postulación de equipos es el día <strong>10 de junio</strong>. ¡Asegura el cupo de tu colegio a tiempo!
+                El plazo máximo de inscripción y postulación de equipos es el día <strong>15 de junio</strong>. ¡Asegura el cupo de tu colegio a tiempo!
               </p>
             </div>
           </details>
@@ -452,7 +453,7 @@ const Challenge = () => {
           <div>
             <strong>POSTULACIONES</strong>
             <strong>HASTA EL</strong>
-            <b>10 DE JUNIO</b>
+            <b>15 DE JUNIO</b>
           </div>
         </div>
 
@@ -492,6 +493,9 @@ const Challenge = () => {
         <div className="sponsors-grid">
           <div className="sponsor-logo-box">
             <img src={daeLogo} alt="Logo DAE" className="support-logo" />
+          </div>
+          <div className="sponsor-logo-box">
+            <img src={cautronLogo} alt="Logo Cautron" className="support-logo zoomed-logo" />
           </div>
           <div className="sponsor-name-box">
             <strong>DAE PUCV</strong>
@@ -540,7 +544,7 @@ const Challenge = () => {
       {/* ── FOOTER ── */}
       <footer className="bottom-bar">
         <div className="circuit-lines left" />
-        <p><Snowflake size={17} /> JÓVENES QUE CODEAN HOY, LÍDERES QUE TRANSFORMAN MAÑANA.</p>
+        <p><Snowflake size={17} /> JÓVENES QUE PROGRAMAN HOY, LÍDERES QUE TRANSFORMAN MAÑANA.</p>
         <div className="footer-credits">
           <span>Equipo Hackaton Invierno 2026</span>
         </div>

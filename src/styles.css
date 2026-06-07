@@ -1175,8 +1175,14 @@ body {
   opacity: 0.95;
   transition: var(--transition);
 }
+.support-logo.zoomed-logo {
+  transform: scale(1.4);
+}
 .support-logo:hover {
   transform: scale(1.04);
+}
+.support-logo.zoomed-logo:hover {
+  transform: scale(1.45);
 }
 .sponsor-logo-box {
   display: flex;
