@@ -1,0 +1,128 @@
+/* ── STACK PAGE SPECIFIC STYLES ── */
+
+.stack-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.stack-card.featured {
+  border-color: #b3d4f0;
+  box-shadow: 0 4px 20px rgba(7, 95, 174, 0.06);
+}
+
+.stack-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  margin-bottom: 14px;
+}
+
+.stack-card h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #061a37;
+  margin: 0 0 12px;
+}
+
+.stack-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tech-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 8px;
+  background: #eef3f8;
+  color: #075fae;
+}
+.tech-badge:nth-child(2),
+.tech-badge:nth-child(4) {
+  background: none;
+  color: #94a3b8;
+  padding: 0 2px;
+}
+
+.stack-whys {
+  display: grid;
+  gap: 14px;
+}
+
+.stack-why {
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+.stack-why strong {
+  display: block;
+  font-size: 14px;
+  color: #061a37;
+  margin-bottom: 4px;
+}
+.stack-why p {
+  margin: 0;
+  font-size: 14px !important;
+  color: #475569;
+}
+
+/* ── SUMMARY TABLE ── */
+.stack-summary {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 24px 0;
+}
+
+.summary-row {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  gap: 12px;
+  padding: 14px 18px;
+  font-size: 13px;
+  align-items: center;
+}
+.summary-row:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0;
+}
+.summary-row.header {
+  background: #f1f5f9;
+  font-weight: 700;
+  color: #061a37;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+.summary-row span {
+  color: #475569;
+}
+.summary-row.header span {
+  color: #061a37;
+}
+
+@media (max-width: 640px) {
+  .summary-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 12px 14px;
+  }
+  .summary-row.header { display: none; }
+  .summary-row span::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #94a3b8;
+  }
+}

@@ -30,3 +30,7 @@ Thumbs.db
 !.env.example
 .antigravitycli/
 .mcp.json
+/kindle-dashboard-launch.sh
+/kindle-dashboard-poc.html
+/launch-dashboard.sh
+/stop.sh

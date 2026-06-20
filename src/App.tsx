@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Calendar,
   Cpu,
@@ -84,6 +85,7 @@ export default function App() {
           <a href="#cronograma" className="nav-link-item">Cronograma</a>
           <a href="#premios" className="nav-link-item">Premios</a>
           <a href="#faq" className="nav-link-item">FAQ</a>
+          <Link to="/preparate" className="nav-link-item">Prepárate</Link>
           <a href="https://forms.gle/u8vDWM8q8NYq7jYj7" target="_blank" rel="noopener noreferrer" className="nav-cta">
             ¡Inscribirse!
           </a>

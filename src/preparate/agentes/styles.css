@@ -1,0 +1,123 @@
+/* ── AGENTES PAGE SPECIFIC STYLES ── */
+
+.agent-cards {
+  display: grid;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.agent-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.agent-card:hover {
+  box-shadow: 0 8px 24px rgba(6, 26, 55, 0.06);
+  transform: translateY(-2px);
+}
+
+.agent-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.agent-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.agent-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #061a37;
+  margin: 0;
+}
+
+.agent-meta {
+  font-size: 12px !important;
+  color: #94a3b8 !important;
+  margin-bottom: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.agent-card > p {
+  font-size: 14px !important;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.agent-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.agent-tags span {
+  font-size: 12px;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+/* ── SETUP STEPS ── */
+.setup-steps {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.setup-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.setup-step-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eef3f8;
+  color: #075fae;
+  flex-shrink: 0;
+}
+
+.setup-step h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #061a37;
+  margin: 0 0 4px;
+}
+.setup-step p {
+  font-size: 14px !important;
+  color: #475569;
+  margin: 0 !important;
+}
+.setup-step code {
+  background: #eef3f8;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #075fae;
+}
